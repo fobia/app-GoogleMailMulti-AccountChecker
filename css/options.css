@@ -1,0 +1,242 @@
+body {
+  background-image: url('../images/grain.png');
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
+:focus {
+  outline: none;
+}
+form {
+  padding: 0;
+  margin: 0px 0px 50px 0px;
+}
+#page-title {
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 24px;
+  color: rgb(177, 177, 177);
+  font-family: 'Helvetica Neue';
+  -webkit-user-select: none;
+  cursor: default;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+}
+#accounts-box {
+  width: 400px;
+  height: 80%;
+  margin: auto;
+  font-size: 18px;
+  font-weight: 100;
+}
+#accounts-box-header > .title {
+  display: inline;
+  font-size: 42px;
+  padding: 10px;
+  color: #08c;
+  font-family: 'Helvetica Neue';
+}
+#accounts-box-header > .throbber {
+  float: right;
+  top: 18px;
+  position: relative;
+}
+.throbber {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+.throbber-title {
+  display: inline;
+  font-size: 13px;
+  color: #69C;
+  margin-left: 5px;
+  top: -2px;
+  position: relative;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+}
+#accounts-list {
+  border: 1px solid #DDD;
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+}
+.account-row-container {
+  cursor: pointer;
+  border-top: 1px solid #CCC;
+  background: white;
+  color: #08C;
+  text-shadow: 0 1px 0 white;
+  -webkit-user-select: none;
+}
+.account-row-container:first-child {
+  border: none;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.account-row-container:focus {
+  background: rgb(248, 252, 255);
+}
+.account-row-container:hover {
+  background: rgb(248, 248, 248);
+  color: #555;
+}
+.account-row-container:last-child {
+  border-bottom-right-radius: 4px;
+  color: #FFF;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+  background-image: -webkit-linear-gradient(top, rgb(0, 173, 255) 10%, rgb(0, 74, 185) 125%);
+  text-align: center;
+  box-shadow:
+    inset 2px 0px 0px rgba(255,255,255,0.2),
+    inset -2px 0px 1px rgba(255, 255, 255, 0.3),
+    inset 0px -2px 1px rgba(0,0,0, 0.3);
+}
+.account-row-container:last-child:hover {
+  color: rgb(255, 255, 255);
+  background-image: -webkit-linear-gradient(top, rgb(74, 197, 255) 10%, rgb(5, 105, 255) 125%);
+}
+.account-row-container:last-child:active {
+  background-image: -webkit-linear-gradient(top, #04c, #08c);
+  color: #FFF;
+}
+.account-row {
+  padding-left: 10px;
+  line-height: 40px;
+  height: 40px;
+}
+.account-row-selected {
+  background: #08C;
+  color: white;
+  border-color: #08C;
+}
+.account-row > .title {
+  float: left;
+  max-width: 345px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.account-row > .icon-envelope {
+float: left;
+margin: 11px 10px 0 0;
+}
+.account-row > .icon-chevron-down {
+  float: right;
+  margin: 10px;
+}
+.labels-list {
+  background: #F0F8FF;
+  font-size: 14px;
+  line-height: 28px;
+  height: 0px;
+  box-shadow:
+    inset 0px 4px 10px -5px rgba(0,0,0,0.1),
+    inset 0px -4px 10px -5px rgba(0,0,0,0.1);
+  -webkit-transition: 0.5s height ease;
+    overflow: hidden;
+}
+.labels-list > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.labels-list li:first-child {
+  border-top: 1px solid rgba(0,0,0,0.1);
+  padding-left: 10px;
+}
+.labels-list li {
+  padding-left: 20px;
+  border-top: 1px solid #DEF;
+  color: rgb(112, 173, 204);
+  text-shadow: 1px 1px 0 white;
+  height: 30px;
+}
+.labels-list li:hover {
+  background: rgb(221, 239, 255);
+}
+.label-name {
+  float: left;
+}
+.labels-list li > i {
+  float: right;
+  margin-right: 10px;
+  font-size: 12px;
+}
+li > .icon-minus-sign {
+  float: left;
+  margin: 8px 10px 0px -10px;
+}
+li > .icon-minus-sign:hover {
+  color: #E00000;
+}
+#suggestions {
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  max-height: 140px;
+  overflow: hidden;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  margin-left: 10px;
+  font-weight: 100;
+  font-size: 14px;
+  line-height: 20px;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  width: 350px;
+  color: rgb(92, 92, 92);
+  text-shadow: none;
+  box-shadow:
+    7px 10px 20px -10px rgba(0,0,0,0.1),
+    -7px 10px 20px -10px rgba(0,0,0,0.1);
+  background-image:
+    -webkit-linear-gradient(bottom, rgb(255, 255, 255), rgb(251, 255, 245));
+}
+.suggestion {
+  border-top: 1px solid #EEE;
+  padding: 1px 4px;
+}
+.suggestion > i {
+  font-size: 12px;
+  color: #999;
+  vertical-align: top;
+}
+.suggestion-label {
+}
+.match {
+  color: #090;
+  font-weight: normal;
+}
+.suggestion:focus,
+.suggestion:active {
+  background: rgb(255, 246, 223);
+}
+.suggestion:hover {
+  background: rgb(242, 255, 216);
+}
+#help {
+  text-align: center;
+  font-size: 14px;
+  margin: 10px;
+  color: #666;
+  cursor: pointer;
+}
+#help:hover{
+  color: #0AC;
+  text-decoration: underline;
+}
+#donate {
+  position: fixed;
+  bottom: 11px;
+  right: 10px;
+  color: rgb(12, 205, 245)
+  text-decoration: none;
+  font-weight: 100;
+}
+#donate:hover {
+  text-decoration: underline;
+}
+iframe {
+  position: fixed;
+  bottom: 10px;
+  right: 55px;
+}

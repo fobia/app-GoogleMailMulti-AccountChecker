@@ -1,0 +1,25 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "images/icon_128.png",
+      "default_popup": "popup.html",
+      "default_title": ""
+   },
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "description": "Acess all your emails without opening Gmail",
+   "icons": {
+      "128": "images/icon_128.png",
+      "16": "images/icon_16.png",
+      "48": "images/icon_48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC0NJ+woarI1E+BEZmRs0tP3X0v3oO/aDZQ2XanHOjsgNtpeSTa5h2BpUcuhvYfeQ0ldn/M39ZUZtSFIxcA6tPRGgThj10hs73xahd/RmX+apeH8NMfovBI4oU4K3ZKkom1CmxLLYG2QgIoTSUMHVl/ilGQuj23A1Boa5j3z45etQIDAQAB",
+   "manifest_version": 2,
+   "name": "Google Mail Multi-Account Checker",
+   "options_page": "options.html",
+   "permissions": [ "notifications", "tabs", "http://*.google.com/", "https://*.google.com/" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "2.0.24",
+   "web_accessible_resources": [ "images/icon_16.png", "images/icon_48.png", "images/icon_128.png" ]
+}
